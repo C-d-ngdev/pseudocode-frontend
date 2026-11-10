@@ -1,24 +1,32 @@
-# pseudocode-frontend
-Interface web de la Plateforme de Pseudo Code Algo : éditeur de pseudo-code et exécution, avec React, Vite et TypeScript.
-Elle permet d'écrire du pseudo-code dans un éditeur et de l'exécuter via l'API.
+# Pseudocode Frontend
+
+Interface web de la Plateforme de Pseudo Code Algo : écrire et exécuter
+du pseudo-code, et suivre des cours.
+
+API : [pseudocode-backend](https://github.com/Mohamed00077/pseudocode-backend)
 
 ## Fonctionnalités
 
-- Éditeur de code Monaco (le même que VS Code)
-- Envoi du code à l'API et affichage du résultat
-- Navigation multi-pages avec React Router
+- Éditeur de code Monaco (celui de VS Code)
+- Exécution du pseudo-code via l'API et affichage du résultat
+- Consultation des cours et des leçons (rendu Markdown)
+- Navigation multi-pages
 
 ## Stack technique
 
-- React + Vite + TypeScript
-- Monaco Editor (`@monaco-editor/react`)
-- React Router
-- TanStack Query
+| Rôle | Outil |
+|---|---|
+| Framework | React + Vite + TypeScript |
+| Éditeur | Monaco Editor (`@monaco-editor/react`) |
+| Routing | React Router |
+| Appels API | TanStack Query |
+| Rendu des cours | react-markdown |
 
 ## Prérequis
 
 - Node.js 20+ (LTS)
-- Le backend lancé : [pseudocode-backend](https://github.com/Mohamed00077/pseudocode-backend)
+- Git
+- Le backend lancé en local (voir son README)
 
 ## Installation
 
@@ -26,35 +34,39 @@ Elle permet d'écrire du pseudo-code dans un éditeur et de l'exécuter via l'AP
 git clone https://github.com/Mohamed00077/pseudocode-frontend.git
 cd pseudocode-frontend
 npm install
+cp .env.example .env             # Windows : copy .env.example .env
 ```
 
-## Configuration
-
-Crée un fichier `.env` à la racine :
+Contenu de `.env` :
 
 ```
 VITE_API_URL=http://localhost:8000
 ```
 
-## Lancer en développement
+## Scripts
 
-```bash
-npm run dev
+| Commande | Rôle |
+|---|---|
+| `npm run dev` | serveur de développement (http://localhost:5173) |
+| `npm run build` | build de production |
+| `npm run preview` | prévisualiser le build |
+| `npm run lint` | vérifier le code |
+
+## Structure du projet
+
 ```
-
-L'application est disponible sur http://localhost:5173.
-
-## Build de production
-
-```bash
-npm run build
-npm run preview
+src/
+├── components/   # composants réutilisables
+├── pages/        # pages (éditeur, cours, ...)
+├── api/          # appels vers le backend
+└── main.tsx
 ```
 
 ## Contribuer
 
-Forkez le dépôt, créez une branche, puis ouvrez une Pull Request.
+Le projet est développé en équipe.
+Lisez [CONTRIBUTING.md](CONTRIBUTING.md) avant de commencer.
 
 ## Licence
 
-Distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE).
+Distribué sous licence MIT. Voir [LICENSE](LICENSE).
