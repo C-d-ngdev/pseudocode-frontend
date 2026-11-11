@@ -3,7 +3,7 @@
 Interface web de la Plateforme de Pseudo Code Algo : écrire et exécuter
 du pseudo-code, et suivre des cours.
 
-API : [pseudocode-backend](https://github.com/Mohamed00077/pseudocode-backend)
+API : [pseudocode-backend](https://github.com/C-d-ngdev/pseudocode-backend)
 
 ## Fonctionnalités
 
@@ -31,7 +31,7 @@ API : [pseudocode-backend](https://github.com/Mohamed00077/pseudocode-backend)
 ## Installation
 
 ```bash
-git clone https://github.com/Mohamed00077/pseudocode-frontend.git
+git clone https://github.com/C-d-ngdev/pseudocode-frontend.git
 cd pseudocode-frontend
 npm install
 cp .env.example .env             # Windows : copy .env.example .env
