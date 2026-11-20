@@ -1,28 +1,13 @@
-// import { useState } from 'react'
-// import heroImg from './assets/hero.png'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import './App.css'
+import AuthCard3D from "./Auth/Auth";
 
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//     <h1>Pseudo Code Algo</h1>
-//     </>
-//   )
-// }
-
-// export default App
-
-function App() {
+export default function App() {
   return (
-    <main>
-      <h1>Plateforme de Pseudo Code Algo</h1>
-      <p>Interface en construction.</p>
-    </main>
-  )
+    <AuthCard3D
+      onLogin={(data) => console.log("login", data)}
+      onRegister={(data) => console.log("register", data)}
+    />
+  );
 }
 
-export default App
+
+
